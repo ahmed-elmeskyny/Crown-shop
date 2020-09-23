@@ -1,3 +1,3 @@
 # Crown-shop
 
-online cloth shopping using react , redux , firebase , stripe API
+online clothes shopping using react , redux , firebase , stripe API
