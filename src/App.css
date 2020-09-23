@@ -1,7 +1,8 @@
 body {
   font-family: "Open Sans Condensed";
-  padding: 20px 70px;
+  margin: 20px;
 }
+
 * {
   box-sizing: border-box;
 }

@@ -1,5 +1,5 @@
 .menu-item {
-  min-width: 30%;
+  width: 350px;
   height: 240px;
   flex: 1 1 auto;
   display: flex;
@@ -23,9 +23,9 @@
     }
   }
 
-  &.large {
-    height: 380px;
-  }
+  // &.large {
+  //   height: 380px;
+  // }
 
   &:first-child {
     margin-right: 7.5px;
