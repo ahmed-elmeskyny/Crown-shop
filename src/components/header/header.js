@@ -14,10 +14,10 @@ const Header = (props) => (
     </Link>
     <div className="options">
       <Link to="/shop" className="option">
-        SHOP
+        Shop
       </Link>
       <Link to="/shop" className="option">
-        CONTACT
+        Contact
       </Link>
       {props.currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
