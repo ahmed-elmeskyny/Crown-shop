@@ -12,3 +12,12 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   }
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
+
+export const decrease = (cartItems, ItemToDecrease) => {
+  const newCartItems = cartItems.map((cartItem) =>
+    cartItem.id === ItemToDecrease.id
+      ? { ...cartItem, quantity: cartItem.quantity - 1 }
+      : cartItem
+  );
+  return newCartItems;
+};

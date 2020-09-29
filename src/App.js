@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./pages/homepage/homepage.component";
 import Shop from "./pages/shop/shop";
 import Header from "./components/header/header";
+import CheckoutPage from "./pages/checkout/checkout";
 import { connect } from "react-redux";
 import setCurrentUser from "./redux/user/user.action";
 import SignInSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
@@ -37,7 +38,17 @@ class App extends React.Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/"
+            render={() =>
+              this.props.currentUser ? (
+                <HomePage />
+              ) : (
+                <SignInSignUp></SignInSignUp>
+              )
+            }
+          />
           <Route path="/shop" component={Shop} />
           <Route
             exact
@@ -50,6 +61,7 @@ class App extends React.Component {
               )
             }
           />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
       </div>
     );
