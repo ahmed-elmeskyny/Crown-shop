@@ -26,16 +26,25 @@ const CheckoutItem = ({ removeItem, cartItem, addItem, decreaseQuantity }) => {
             }
           }}
         >
-          &#10134;
+          <span role="img" aria-label="nai">
+            {" "}
+            &#10134;
+          </span>
         </div>
         <span className="value">{quantity}</span>
         <div className="arrow plus-arrow" onClick={() => addItem(cartItem)}>
-          &#10133;
+          <span role="img" aria-label="nai">
+            {" "}
+            &#10133;
+          </span>
         </div>
       </span>
       <span className="price">{price}$</span>
       <div className="remove-button" onClick={() => removeItem(cartItem)}>
-        &#10008;{" "}
+        <span role="img" aria-label="nai">
+          {" "}
+          &#10008;
+        </span>{" "}
       </div>
     </div>
   );

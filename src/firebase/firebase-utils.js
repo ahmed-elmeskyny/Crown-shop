@@ -33,6 +33,19 @@ export const createUserProfileDocument = async (userAuth, otherData) => {
   }
   return userRef;
 };
+
+export const convertCollectionSnapshotToMap = (collections) => {
+  const NewCollections = collections.docs.map((doc) => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+  return NewCollections;
+};
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();

@@ -12,7 +12,6 @@ const CollectionOverview = ({ collections }) => (
         items={collection.items}
       />
     ))}
-    ;
   </div>
 );
 const mapStateToProps = (state) => ({

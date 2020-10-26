@@ -42,12 +42,9 @@ class App extends React.Component {
             exact
             path="/"
             render={() =>
-              this.props.currentUser ? (
-                <HomePage />
-              ) : (
-                <SignInSignUp></SignInSignUp>
-              )
-            }
+
+              <HomePage />}
+
           />
           <Route path="/shop" component={Shop} />
           <Route
@@ -57,8 +54,8 @@ class App extends React.Component {
               this.props.currentUser ? (
                 <Redirect to="/" />
               ) : (
-                <SignInSignUp></SignInSignUp>
-              )
+                  <SignInSignUp></SignInSignUp>
+                )
             }
           />
           <Route exact path="/checkout" component={CheckoutPage} />
